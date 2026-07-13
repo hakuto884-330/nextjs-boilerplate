@@ -1,0 +1,80 @@
+import Link from 'next/link';
+
+export default function NextPage() {
+  return (
+    <div style={{
+      backgroundColor: '#0f0f12', // 1枚目と同じ高級感のあるブラック
+      color: '#ffffff',
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column' as const,
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      padding: '0 20px',
+    }}>
+      <main style={{
+        display: 'flex',
+        flexDirection: 'column' as const,
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexGrow: 1,
+        textAlign: 'center',
+      }}>
+        {/* 2枚目のメインタイトル */}
+        <h1 style={{
+          fontSize: '32px',
+          fontWeight: '700',
+          letterSpacing: '2px',
+          marginBottom: '20px',
+        }}>
+          NEXT STAGE
+        </h1>
+        
+        <p style={{
+          fontSize: '16px',
+          color: '#a0a0ab',
+          marginBottom: '40px',
+          lineHeight: '1.6',
+        }}>
+          無事に2枚目のページへ移動しました。<br />
+          ここから新しいコンテンツを追加できます。
+        </p>
+
+        {/* 1枚目に戻るボタン */}
+        <Link href="/" style={{ textDecoration: 'none' }}>
+          <button style={{
+            padding: '12px 36px',
+            fontSize: '14px',
+            fontWeight: '600',
+            letterSpacing: '2px',
+            color: '#ffffff',
+            backgroundColor: 'transparent',
+            border: '1px solid #ffffff', // 白枠線のミニマルなボタン
+            borderRadius: '4px',
+            cursor: 'pointer',
+            textTransform: 'uppercase',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            transition: 'background 0.2s',
+          }}>
+            ← BACK
+          </button>
+        </Link>
+      </main>
+
+      <footer style={{
+        width: '100%',
+        height: '60px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: '#44444a',
+        fontSize: '12px',
+      }}>
+        © 2026 HAYASHI HAKUTO. ALL RIGHTS RESERVED.
+      </footer>
+    </div>
+  );
+}
